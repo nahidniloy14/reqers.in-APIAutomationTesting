@@ -1,5 +1,5 @@
 import requests
-response2=requests.get("https://reqres.in/api/users/2",params={
+response2=requests.get("https://reqres.in/api/users/2",params=
 
 {
     "data": {
@@ -14,6 +14,7 @@ response2=requests.get("https://reqres.in/api/users/2",params={
         "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
     }
 }
-})
+)
 singleUSer=response2.json()
 print(singleUSer)
+assert response2.status_code == 200

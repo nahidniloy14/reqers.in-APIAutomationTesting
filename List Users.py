@@ -1,5 +1,5 @@
 import requests
-response1=requests.get("https://reqres.in//api/users?page=2",params={
+response1=requests.get("https://reqres.in//api/users?page=2",params=
 [
 {
 "page": 2,
@@ -55,8 +55,6 @@ response1=requests.get("https://reqres.in//api/users?page=2",params={
 "text": "To keep ReqRes free, contributions towards server costs are appreciated!"
 }
 }
-]
-})
+])
 listUsers=response1.json()
 print(listUsers)
-
