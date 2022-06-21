@@ -1,9 +1,7 @@
 import requests
 import configparser
-config=configparser.ConfigParser() #configparser method and object creation
-config.read("Utilities/properties.ini") #call read method
-
-response1=requests.get(config['API']['endpoint']+'/api/users?page=2',params=
+from Utilities.configurations import *
+response1=requests.get(getConfig()['API']['endpoint']+'/api/users?page=2',params=
 [
 {
 "page": 2,
