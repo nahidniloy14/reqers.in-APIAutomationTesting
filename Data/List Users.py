@@ -1,5 +1,9 @@
 import requests
-response1=requests.get("https://reqres.in//api/users?page=2",params=
+import configparser
+config=configparser.ConfigParser() #configparser method and object creation
+config.read("Utilities/properties.ini") #call read method
+
+response1=requests.get(config['API']['endpoint']+'/api/users?page=2',params=
 [
 {
 "page": 2,
